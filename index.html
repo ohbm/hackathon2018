@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>OHBM Brainhack 2018</title>
+    <title>Brainhack</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -17,8 +17,7 @@
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
     <!-- <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> -->
    <link href='https://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css'>
    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
@@ -33,7 +32,7 @@
 </head>
 
 <body>
-
+  <div id="app">
     <!-- Navigation -->
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
@@ -66,24 +65,24 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center text-center">
-            <h1>OHBM Brainhack 2018</h1>
+            <h1>{{info.title}}</h1>
 			<div class="row">
 				<div class="col-xl-8 col-xl-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-					<h2>Seoul, South Korea</h2>
+					<h2>{{info.location}}</h2>
 				</div>
 		    </div>
 			<div class="row">
 				<div class="col-xl-8 col-xl-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-					<h2>June 7-9, 2018</h2>
+					<h2>{{info.dates}}</h2>
 				</div>
 		    </div>
             <br>
-			<a href="#" target="_blank" class="btn btn-dark btn-lg top5 left5">Register Now</a>
-      <a href="https://brainhack-slack-invite.herokuapp.com/" target="_blank" class="btn btn-dark btn-lg top5 left5">Join Brainhack on Slack</a>
-      <a href="https://github.com/ohbm/hackathon2018/wiki/Projects" target="_blank" class="btn btn-dark btn-lg top5 left5">See Projects</a><br><br>
+			<a v-bind:href="info.registration_link" target="_blank" class="btn btn-dark btn-lg top5 left5">Register Now</a>
+      <a v-bind:href="info.slack_link" target="_blank" class="btn btn-dark btn-lg top5 left5">Join Brainhack on Slack</a>
+      <a v-bind:href="info.project_submit_link" target="_blank" class="btn btn-dark btn-lg top5 left5">See Projects</a><br><br>
 
 			<br><br><br>
-            <p>Photo by <a href="https://raw.githubusercontent.com/gkiar/brain-art/master/vascular_brain/figs/brightly_robust_wallpaper.png">Greg Kiar</a></p>
+            <p>Photo by <a v-bind:href="info.title_photo_link">{{info.title_photo_author}}</a></p>
             <!-- <a href="#about" class="btn btn-dark btn-lg">Find Out More</a> -->
         </div>
           <div class="text-bottom-right">
@@ -103,97 +102,60 @@
                 </div>
             </div>
             <!-- /.row -->
-        </div>
+
         <!-- /.container -->
-    </section>
+
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
     <section id="services" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
                 <!-- <hr class="small"> -->
                 <div class="row">
-                  
-                    <div class="col-md-3 col-sm-6">
+
+                    <div class="col-md-3 col-sm-6" v-for="service in info.services">
                         <div class="service-item">
                             <span class="fa-stack fa-4x">
                             <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-share-alt fa-stack-1x text-primary"></i>
+                            <i v-bind:class="'fa ' + service.fa_icon +  ' fa-stack-1x text-primary'"></i>
                         </span>
                             <h4>
-                                <strong>Share</strong>
+                                <strong>{{service.name}}</strong>
                             </h4>
-                            <p>Show your research to other neuroimaging researchers.</p>
+                            <p>{{service.desc}}</p>
                         </div>
                     </div>
-                    
-                    <div class="col-md-3 col-sm-6">
-                        <div class="service-item">
-                            <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-graduation-cap fa-stack-1x text-primary"></i>
-                        </span>
-                            <h4>
-                                <strong>Gain Skills</strong>
-                            </h4>
-                            <p>Learn how to apply the latest computational tools to you data.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-3 col-sm-6">
-                        <div class="service-item">
-                            <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-gears fa-stack-1x text-primary"></i>
-                        </span>
-                            <h4>
-                                <strong>Get Involved</strong>
-                            </h4>
-                            <p>Find exciting projects that you would like to contribute to.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-3 col-sm-6">
-                        <div class="service-item">
-                            <span class="fa-stack fa-4x">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-wechat fa-stack-1x text-primary"></i>
-                        </span>
-                            <h4>
-                                <strong>Be Social</strong>
-                            </h4>
-                            <p>Meet researchers from a variety of backgrounds.</p>
-                        </div>
-                    </div>
-                    
+
 
                 </div>
                 <!-- /.row (nested)
             </div>
             <!-- /.col-lg-10 -->
+          </div>
         </div>
         <!-- /.row -->
-</section>
+    </section>
+
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
     <section id="details" class="details">
         <div class="container">
             <div class="row text-center">
                  <div class="col-xl-8 col-xl-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-					<p><h3><a href="#" target="_blank">Registration for the OHBM Brainhack 2018 will open soon!</a></h3></p>
-		    <p>The OHBM Brainhack 2018 is an official satellite event of the <a href="http://humanbrainmapping.org/" target="_blank">OHBM 2018</a> Meeting. The goal of the hackathon is to bring together researchers with disparate backgrounds to collaborate on open science projects in neuroimaging.</p> <br/>
-					<p>Participants are encouraged to post project ideas to <a href="https://github.com/ohbm/hackathon2018/wiki/Projects" target="_blank">the project page</a>, and to submit a report describing their project to the <a href="http://www.brainhack.org/proceedings">2018 Brainhack Proceedings</a> that may be published by <a href="http://gigasciencejournal.com/">Gigascience</a> after the event.</p>
-					<p>Please join <a href="https://brainhack-slack-invite.herokuapp.com/" target="_blank">the Brainhack Slack project</a> for updated information on the developing Hackathon content and to contribute your own ideas.</p>
+					<p><h3><a v-bind:href="info.registration_link" target="_blank">Registration for the {{info.title}} will open soon!</a></h3></p>
+		    <p>The {{info.title}} is an official satellite event of the <a href="http://humanbrainmapping.org/" target="_blank">OHBM {{info.year}}</a> Meeting. The goal of the hackathon is to bring together researchers with disparate backgrounds to collaborate on open science projects in neuroimaging.</p> <br/>
+					<p>Participants are encouraged to post project ideas to <a v-bind:href="info.project_submit_link" target="_blank">the project page</a>, and to submit a report describing their project to the <a href="http://www.brainhack.org/proceedings">{{info.year}} Brainhack Proceedings</a> that may be published by <a href="http://gigasciencejournal.com/">Gigascience</a> after the event.</p>
+					<p>Please join <a href="{{info.slack_link}}" target="_blank">the Brainhack Slack project</a> for updated information on the developing Hackathon content and to contribute your own ideas.</p>
 						</div>
 					</div>
           <div class="row text-left">
             <div class="col-xl-8 col-xl-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
-					<h4>Dates: June 7-9, 2018</h4> <br/>
-					<h4>Costs: $TBD USD for students/postdocs/RAs, $TBD USD for others, includes onsite breakfast, lunch, and refreshments</h4> <br/>
-					<h4>Location: <a href="#map"> Seoul, South Korea</a></h4> <br/>
+					<h4>Dates: {{info.dates}}</h4> <br/>
+					<h4>Costs: {{info.details.costs}}</h4> <br/>
+					<h4>Location: <a href="#map"> {{info.location}}</a></h4> <br/>
 						</div>
 					</div>
 		</div>
-	</section>
+	  </section>
 
     <!-- Callout -->
     <aside class="workspace" id="schedule">
@@ -205,187 +167,22 @@
 			</div>
 			<div class="row top30">
 
-				<div class="col-md-6 col-lg-4 col-sm-10 col-xs-10 col-md-offset-0 col-lg-offset-0 col-sm-offset-1 col-xs-offset-1">
+				<div v-for="sched in info.schedule" class="col-md-6 col-lg-4 col-sm-10 col-xs-10 col-md-offset-0 col-lg-offset-0 col-sm-offset-1 col-xs-offset-1">
 					<div class="row top5 text-center">
 				        <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2 text-dark">
-					        <h4>Friday, March 03</h4>
+					        <h4>{{sched.date}}</h4>
 				        </div>
 				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            6pm
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Welcome + Intro to Brainhack 
-			            </div>
-				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            6:30pm
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Ice-Breaker
-			            </div>
-				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            7:00-8:00PM
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Dinner+Brainstorming
-			            </div>
-				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            8:00pm
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Project Pitches
-			            </div>
-				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            9:00pm-
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Socializing
-			            </div>
-				    </div>
-            
-            <div class="row top5">&nbsp;
-  				    </div>
-  					<div class="row top5">&nbsp;
-  				    </div>
-  					<div class="row top5">&nbsp;
-  				    </div>
-  				</div>
 
-				<div class="col-md-6 col-lg-4 col-sm-10 col-xs-10 col-md-offset-0 col-lg-offset-0 col-sm-offset-1 col-xs-offset-1">
-					<div class="row top5 text-center">
-				        <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2 text-dark">
-					        <h4>Saturday, March 04</h4>
-				        </div>
-				    </div>
-            
-					<div class="row top5">
+					<div class="row top5" v-for="time in sched.times">
 			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            9:30-10:30am
+				            {{time.time}}
 			            </div>
 			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Breakfast + Project Planning
+				            {{time.event}}
 			            </div>
 				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            10:30-11:30am
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Keynote: Fernando Chirigati
-			            </div>
-				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            11:30-1pm
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Open Hacking
-			            </div>
-				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            1:00-2:00pm
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Lunch
-			            </div>
-				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            2:00-5:00pm
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Open Hacking
-			            </div>
-				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            5:00-6:30pm
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Unconference Sessions
-			            </div>
-				    </div>
-            
-            <div class="row top5">&nbsp;
-  				    </div>
-  					<div class="row top5">&nbsp;
-  				    </div>
-  					<div class="row top5">&nbsp;
-  				    </div>
-  				</div>
 
-				<div class="col-md-6 col-lg-4 col-sm-10 col-xs-10 col-md-offset-0 col-lg-offset-0 col-sm-offset-1 col-xs-offset-1">
-					<div class="row top5 text-center">
-				        <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2 text-dark">
-					        <h4>Sunday, March 05</h4>
-				        </div>
-				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            9:30-11:30
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Breakfast + Open Hacking
-			            </div>
-				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            11:30-1:00pm
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Ignite Talks
-			            </div>
-				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            1:00-2:00pm
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Lunch
-			            </div>
-				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            2:00-5:30pm
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Open Hacking
-			            </div>
-				    </div>
-            
-					<div class="row top5">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            5:30-7:00pm
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            Project Presentations + Socialize
-			            </div>
-				    </div>
-            
             <div class="row top5">&nbsp;
   				    </div>
   					<div class="row top5">&nbsp;
@@ -406,7 +203,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3 class="text-color-blue">Project submissions will open from  - . </a></h3>
+                    <h3 class="text-color-blue">Project submissions will open from {{info.project_open}} - {{info.project_close}}. </a></h3>
                 </div>
             </div>
         </div>
@@ -418,7 +215,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3 class="text-color-blue">Hosted at: <a href="#">TBD</a></h3>
+                    <h3 class="text-color-blue">Hosted at: <a v-bind:href="info.location_url">{{info.location_name}}</a></h3>
                 </div>
             </div>
         </div>
@@ -427,10 +224,10 @@
 
     <!-- Map -->
     <section id="map" class="map">
-	<iframe width="100%" height="100%" frameborder="0" scrolling="no" scrollwheel="false" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.810287136789!2d126.9238163152737!3d37.55953323228689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDMzJzM0LjMiTiAxMjbCsDU1JzMzLjYiRQ!5e0!3m2!1sen!2sca!4v1504025640279" style="border:0" allowfullscreen></iframe>
+	     <iframe width="100%" height="100%" frameborder="0" scrolling="no" scrollwheel="false" marginheight="0" marginwidth="0" v-bind:src="info.google_maps_link" style="border:0" allowfullscreen></iframe>
 	    <br />
         <small>
-        <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.810287136789!2d126.9238163152737!3d37.55953323228689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDMzJzM0LjMiTiAxMjbCsDU1JzMzLjYiRQ!5e0!3m2!1sen!2sca!4v1504025640279"></a>
+        <a href="{{info.google_maps_link}}"></a>
 
 	    </small>
     </section>
@@ -439,21 +236,23 @@
         <div class="container-fluid">
             <div class="row no-gutter">
 				<div class="col-lg-12 text-center">
-				    <br><h3 class="text-color-blue"><strong>The OHBM Brainhack 2018 is generously sponsored By:</strong></h3><br><br>
+				    <br><h3 class="text-color-blue"><strong>The {{info.title}} is generously sponsored By:</strong></h3><br><br>
 			    </div>
 			</div>
 
-		  <div class="row no-gutter top30">
-        
+		  <div class="row no-gutter top30" v-for="sponsor in info.sponsors">
+
 			    <div class="col-lg-10 col-lg-offset-1" >
-            
+
                     <div class="col-lg-6 col-lg-offset-0 col-md-6 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-                        <a href="" target="_blank"><img src="" class="img-responsive" alt="" id=""></a>
+                        <a href="{{sponsor.url}}" target="_blank">
+                          <img v-bind:src="sponsor.logo" class="img-responsive" v-bind:alt="sponsor.name" v-bind:id="sponsor.name">
+                        </a>
                     </div>
 
-            
-                  </div>
-            
+
+          </div>
+
 			</div>
 
 
@@ -474,21 +273,9 @@
                     <h3><strong>Organizers:</strong>
                     </h3>
                     <ul class="list-unstyled">
-                      
-                        <li><h4>Anisha Keshavan*</h4></li>
-                        
-                        <li><h4>Gregory Kiar*</h4></li>
-                        
-                        <li><h4>Kangjoo Lee</h4></li>
-                        
-                        <li><h4>Yeun Kim</h4></li>
-                        
-                        <li><h4>Pierre Bellec</h4></li>
-                        
-                        <li><h4>Chris Filo Gorgolewski</h4></li>
-                        
-                        <li><h4>JB Poline</h4></li>
-                        
+
+                        <li v-for="org in info.organizers"><h4>{{org}}</h4></li>
+
 
                     </ul><br>
                 </div>
@@ -496,52 +283,74 @@
         </div>
     </footer>
 
+  </div>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
     <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
 
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
+      var app = new Vue({
+        el: '#app',
+        data: {
+          info: {
+            details: {
+              costs: null,
             }
-        });
-    });
+          }
+        }
+      })
 
-	$('.map').click(function () {
-	    $('.map iframe').css("pointer-events", "auto");
-	});
-
-	$( ".map" ).mouseleave(function() {
-	  $('.map iframe').css("pointer-events", "none");
-	});
+      $.getJSON("data.json", function(data){
+        console.log("data is", data);
+        app.info = data;
+      })
 
     </script>
+    <!-- Custom Theme JavaScript -->
+    <script>
+      // Closes the sidebar menu
+      $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+      });
+
+      // Opens the sidebar menu
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+
+      // Scrolls to the selected menu item on the page
+      $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+              if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                  if (target.length) {
+                      $('html,body').animate({
+                          scrollTop: target.offset().top
+                      }, 1000);
+                      return false;
+                  }
+              }
+          });
+      });
+
+    	$('.map').click(function () {
+    	    $('.map iframe').css("pointer-events", "auto");
+    	});
+
+    	$( ".map" ).mouseleave(function() {
+    	  $('.map iframe').css("pointer-events", "none");
+    	});
+
+    </script>
+
+
 
 </body>
 

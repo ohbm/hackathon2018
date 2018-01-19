@@ -52,7 +52,7 @@
     "location_name": "TBD",
     "location_url":"#",
     "google_maps_link":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.810287136789!2d126.9238163152737!3d37.55953323228689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDMzJzM0LjMiTiAxMjbCsDU1JzMzLjYiRQ!5e0!3m2!1sen!2sca!4v1504025640279",
-    "sponsors": [{"name": "", "url": "", "logo":""}],
+    "sponsors": [{"name": "INCF", "url": "google.com", "logo":"http://can-acn.org/meeting2012/images/incf-logo.png"}],
     "organizers": ["Anisha Keshavan*", "Gregory Kiar*", "Kangjoo Lee", "Yeun Kim", "Pierre Bellec", "Chris Filo Gorgolewski", "JB Poline"]
 
 }
