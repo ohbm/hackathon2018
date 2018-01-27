@@ -27,7 +27,7 @@
     "desc":"Meet researchers from a variety of backgrounds.",
     "fa_icon": "fa-wechat"}],
     "details": {"costs":"$TBD USD for students/postdocs/RAs, $TBD USD for others, includes onsite breakfast, lunch, and refreshments"},
-    "schedule_background_img": "http://country-clone.htl-web.com/files/2014/02/Seoul-South-Korea-Skyline-iStock_50381588_MEDIUM.jpg",
+    "schedule_background_img": "https://unsplash.it/1200/600",
     "schedule":  [{"date": "Friday, March 03",
                   "times": [{"time": "6pm", "event": "Welcome + Intro to Brainhack "},
                             {"time": "6:30pm", "event": "Ice-Breaker"},
