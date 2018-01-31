@@ -233,7 +233,7 @@ hr.small {
     height: 400px;
     color: #000;
     font-family: 'Comfortaa', cursive;
-    background: url(https://d30y9cdsu7xlg0.cloudfront.net/png/45447-200.png) no-repeat center center scroll;
+    /*background: url(https://d30y9cdsu7xlg0.cloudfront.net/png/45447-200.png) no-repeat center center scroll;*/
     -webkit-background-size: auto;
     -moz-background-size: auto;
     background-size: auto;
