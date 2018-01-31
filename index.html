@@ -12,7 +12,7 @@
     <title>Brainhack</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
@@ -21,7 +21,7 @@
     <!-- <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> -->
    <link href='https://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css'>
    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
-
+   <link href='https://cdn.rawgit.com/Grible/timetable.js/master/dist/styles/timetablejs.css' rel='stylesheet' type='text/css'>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -67,12 +67,12 @@
         <div class="text-vertical-center text-center">
             <h1>{{info.title}}</h1>
 			<div class="row">
-				<div class="col-xl-8 col-xl-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+				<div class="col-12">
 					<h2>{{info.location}}</h2>
 				</div>
 		    </div>
 			<div class="row">
-				<div class="col-xl-8 col-xl-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+				<div class="col-12">
 					<h2>{{info.dates}}</h2>
 				</div>
 		    </div>
@@ -140,7 +140,7 @@
     <section id="details" class="details">
         <div class="container">
             <div class="row text-center">
-                 <div class="col-xl-8 col-xl-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+                 <div class="col-12">
 					<p><h3><a v-bind:href="info.registration_link" target="_blank">Registration for the {{info.title}} will open soon!</a></h3></p>
 		    <p>The {{info.title}} is an official satellite event of the <a href="http://humanbrainmapping.org/" target="_blank">OHBM {{info.year}}</a> Meeting. The goal of the hackathon is to bring together researchers with disparate backgrounds to collaborate on open science projects in neuroimaging.</p> <br/>
 					<p>Participants are encouraged to post project ideas to <a v-bind:href="info.project_submit_link" target="_blank">the project page</a>, and to submit a report describing their project to the <a href="http://www.brainhack.org/proceedings">{{info.year}} Brainhack Proceedings</a> that may be published by <a href="http://gigasciencejournal.com/">Gigascience</a> after the event.</p>
@@ -148,7 +148,7 @@
 						</div>
 					</div>
           <div class="row text-left">
-            <div class="col-xl-8 col-xl-offset-2 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0">
+            <div class="col-12">
 					<h4>Dates: {{info.dates}}</h4> <br/>
 					<h4>Costs: {{info.details.costs}}</h4> <br/>
 					<h4>Location: <a href="#map"> {{info.location}}</a></h4> <br/>
@@ -159,41 +159,48 @@
 
     <!-- Callout -->
     <aside class="workspace" id="schedule">
-        <div class="container">
-			<div class="row text-center top30">
-				<div class="col-md-2 col-md-offset-5 col-xs-8 col-xs-offset-2 text-dark">
-				    <h3>Schedule</h3>
-			    </div>
-			</div>
-			<div class="row top30">
+      <div class="container">
+  			<div class="row text-center top30">
+  				<div class="col-12">
+  				    <h1>Schedule</h1>
+  			    </div>
+  			</div>
+  			<div class="row top30" v-if="info.scheduleType=='single'">
 
-				<div v-for="sched in info.schedule" class="col-md-6 col-lg-4 col-sm-10 col-xs-10 col-md-offset-0 col-lg-offset-0 col-sm-offset-1 col-xs-offset-1">
-					<div class="row top5 text-center">
-				        <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2 text-dark">
-					        <h4>{{sched.date}}</h4>
-				        </div>
-				    </div>
-
-					<div class="row top5" v-for="time in sched.times">
-			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
-				            {{time.time}}
-			            </div>
-			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
-				            {{time.event}}
-			            </div>
-				    </div>
-
-            <div class="row top5">&nbsp;
+  				<div v-for="sched in info.schedule" class="col-md-6 col-lg-4 col-sm-10 col-xs-10 col-md-offset-0 col-lg-offset-0 col-sm-offset-1 col-xs-offset-1">
+  					  <div class="row top5 text-center">
+  				        <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2 text-dark">
+  					        <h4>{{sched.date}}</h4>
+  				        </div>
   				    </div>
-  					<div class="row top5">&nbsp;
-  				    </div>
-  					<div class="row top5">&nbsp;
-  				    </div>
-  				</div>
+
+    					<div class="row top5" v-for="time in sched.times">
+    			            <div class="col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1 col-sm-5 col-sm-offset-0 col-xs-5 text-dark">
+    				            {{time.time}}
+    			            </div>
+    			            <div class="col-sm-7 col-sm-offset-0 col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1 col-xs-7 text-dark">
+    				            {{time.event}}
+    			            </div>
+    				   </div>
+
+              <div class="row top5">&nbsp;
+    				    </div>
+    					<div class="row top5">&nbsp;
+    				    </div>
+    					<div class="row top5">&nbsp;
+    				    </div>
+    				</div>
 
 
 
-		    </div>
+  		    </div>
+        <div class="row top30 col-12" v-else>
+          <div class="scheduleCal container" v-for="(event, index) in info.schedule">
+            <h3>{{event.date}}</h3>
+            <timetable :id="'day'+index" :data="event"><timetable>
+          </div>
+        </div>
+
 		</div>
     </aside>
 
@@ -265,7 +272,7 @@
     <footer id="contact" class="services bg-primary">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
+                <div class="col-12 text-center">
                     <h3><strong>For more information:</strong></h3>
                     <i class="fa fa-envelope-o fa-fw"></i>
                     <a href="mailto:hbm.hackathon@gmail.com">hbm.hackathon@gmail.com</a>
@@ -286,12 +293,50 @@
 
   </div>
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <script src="https://cdn.rawgit.com/Grible/timetable.js/master/dist/scripts/timetable.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js"></script>
     <script>
+
+    Vue.component('timetable', {
+      template: '<div class="timetable" :id="this.id"></div>',
+      data: function(){
+        return {
+
+        };
+      },
+      mounted: function(){
+        console.log("data for", this.id, "is", this.data)
+
+
+            var timetable = new Timetable();
+            timetable.setScope(9, 17); // optional, only whole hours between 0 and 23
+            var sched = this.data;
+            var tracks = Object.keys(sched.times);
+            console.log("tracks", tracks, sched)
+            timetable.addLocations(tracks);
+            for (var j=0; j<tracks.length; j += 1){
+              trackName = tracks[j]
+              trackData = sched.times[tracks[j]]
+              console.log("trackName", trackName, trackData)
+              for (var k=0; k<trackData.length; k += 1){
+                var td = trackData[k];
+                console.log(td)
+                timetable.addEvent(td.event, trackName, new Date(td.timeStart[0],td.timeStart[1],td.timeStart[2],td.timeStart[3], td.timeStart[4]), new Date(td.timeEnd[0],td.timeEnd[1],td.timeEnd[2],td.timeEnd[3],td.timeEnd[4]));
+              }
+            }
+            var renderer = new Timetable.Renderer(timetable);
+
+            renderer.draw('#'+this.id); // any css selector
+
+
+      },
+      props: ['id', 'data'],
+      // options
+    })
 
       var app = new Vue({
         el: '#app',
@@ -300,21 +345,45 @@
             details: {
               costs: null,
             }
-          }
+          },
+          timetables: [],
+        },
+        watch: {
         },
         computed: {
-          locationStyle() {
-            console.log(this.info.location_logo);
-            return {
-              background: `url(${this.info.location_logo}) no-repeat center center scroll;`
+          renderTimetables: function() {
+            for (i=0; i< this.timetables.length; i+=1){
+              try {
+                console.log('rendring ttables')
+                this.timetables[i].draw('#day'+i); // any css selector
+              } catch (e) {
+
+              } finally {
+
+              }
             };
           },
         },
       })
 
-      $.getJSON("https://raw.githubusercontent.com/ohbm/hackathon2018/master/data.json", function(data){
+      var url = "https://raw.githubusercontent.com/ohbm/hackathon2018/master/data.json"
+      if(window.location.hostname=='localhost'){
+        url = "data.json"
+      }
+      $.getJSON(url, function(data){
         console.log("data is", data);
         app.info = data;
+
+
+
+          /*timetable.addLocations(['Silent Disco', 'Nile', 'Len Room', 'Maas Room']);
+          timetable.addEvent('Frankadelic', 'Nile', new Date(2015,7,17,10,45), new Date(2015,7,17,12,30));*/
+
+          //var renderer = new Timetable.Renderer(timetable);
+          //renderer.draw('.timetable'); // any css selector
+
+
+
       })
 
     </script>
