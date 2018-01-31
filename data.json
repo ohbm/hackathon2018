@@ -26,8 +26,8 @@
   {"name":"Be Social",
     "desc":"Meet researchers from a variety of backgrounds.",
     "fa_icon": "fa-wechat"}],
-    "details": {"costs":"$200 USD, includes 3-nights stay, onsite breakfast, lunch, one dinner, and refreshments"},
-    "schedule_background_img": "https://unsplash.it/1200/600",
+    "details": {"costs":"$200 USD, includes 3-nights stay, onsite breakfast, lunch, and refreshments"},
+    "schedule_background_img": "http://www.changiairport.com/content/dam/cag/5-airport-experience/3-services-facilities/free_singapore_tour_900.jpg",
     "schedule":  [{"date": "Thursday, June 14",
                   "times": [{"time": "6pm", "event": "Welcome + Intro to Brainhack "},
                             {"time": "6:30pm", "event": "Ice-Breaker"},
@@ -51,7 +51,7 @@
     "location_logo": "http://nus.edu.sg/images/resources/nus-og-logo.jpg",
     "location_name": "National University of Singapore U-Town Campus",
     "location_url":"http://utown.nus.edu.sg/",
-    "google_maps_link":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.810287136789!2d126.9238163152737!3d37.55953323228689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDMzJzM0LjMiTiAxMjbCsDU1JzMzLjYiRQ!5e0!3m2!1sen!2sca!4v1504025640279",
+    "google_maps_link":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.3915719979361!2d103.7727974426041!3d1.3052016997564573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1af575f7ff17%3A0x1056d4b4bd4641c8!2sUniversity+Town!5e0!3m2!1sen!2sca!4v1517423143045",
     "sponsors": [{"name": "INCF", "url": "google.com", "logo":"http://can-acn.org/meeting2012/images/incf-logo.png"}],
     "organizers": ["Anisha Keshavan*", "Gregory Kiar*", "Valeria Kebets", "Csaba Orban", "Anqi Qiu", "Thomas Yeo", "Chris Gorgolewski", "JB Poline"]
 }
