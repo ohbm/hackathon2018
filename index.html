@@ -211,7 +211,8 @@
 
 
     <!-- Call to Action -->
-    <aside id="location" class="location" :style="locationStyle">
+    <aside id="location" class="location" :style="{ backgroundImage: 'url(' + info.location_logo + ')' }">
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -302,10 +303,13 @@
           }
         },
         computed: {
-          locationStyle:{
-            {background: `url(${this.info.location_logo}) no-repeat center center scroll;`}
-          }
-        }
+          locationStyle() {
+            console.log(this.info.location_logo);
+            return {
+              background: `url(${this.info.location_logo}) no-repeat center center scroll;`
+            };
+          },
+        },
       })
 
       $.getJSON("https://raw.githubusercontent.com/ohbm/hackathon2018/master/data.json", function(data){
