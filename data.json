@@ -31,32 +31,58 @@
     "scheduleType": "double",
     "schedule":  [{"date": "Thursday, June 14",
                   "times": {"HackTrack": [
-                              {"timeStart": [2018,14,6,9,0], "timeEnd": [2018,14,6,11,0], "event": "Welcome + Intro to Brainhack "},
-                              {"timeStart": [2018,14,6,11,15], "timeEnd": [2018,14,6,12,0], "event": "Other Event"},
-                              {"timeStart": [2018,14,6,14,0], "timeEnd": [2018,14,6,16,45], "event": "Another Event"}
+                              {"timeStart": [2018,14,6,8,0], "timeEnd": [2018,14,6,9,0], "event": "Check-in"},
+                              {"timeStart": [2018,14,6,9,0], "timeEnd": [2018,14,6,10,0], "event": "Welcome + Intro"},
+                              {"timeStart": [2018,14,6,10,0], "timeEnd": [2018,14,6,11,30], "event": "Mingling + Project Pitches"},
+                              {"timeStart": [2018,14,6,12,0], "timeEnd": [2018,14,6,13,0], "event": "Lunch"},
+                              {"timeStart": [2018,14,6,13,0], "timeEnd": [2018,14,6,17,0], "event": "Hacking"},
+                              {"timeStart": [2018,14,6,17,0], "timeEnd": [2018,14,6,18,30], "event": "Dinner + Unconference"},
+                              {"timeStart": [2018,14,6,18,30], "timeEnd": [2018,14,6,22,0], "event": "Hacking"}
                               ],
-                            "LearnTrack": [
-                              {"timeStart": [2018,14,6,9,0], "timeEnd": [2018,14,6,11,0], "event": "Welcome + Intro to Brainhack "}
+                            "TrainTrack": [
+                              {"timeStart": [2018,14,6,8,0], "timeEnd": [2018,14,6,9,0], "event": "Check-in"},
+                              {"timeStart": [2018,14,6,9,0], "timeEnd": [2018,14,6,10,0], "event": "Welcome + Intro"},
+                              {"timeStart": [2018,14,6,10,0], "timeEnd": [2018,14,6,11,30], "event": "Mingling + Project Pitches"},
+                              {"timeStart": [2018,14,6,12,0], "timeEnd": [2018,14,6,13,0], "event": "Lunch"},
+                              {"timeStart": [2018,14,6,13,0], "timeEnd": [2018,14,6,15,0], "event": "Repronim: Reproducibility Basics"},
+                              {"timeStart": [2018,14,6,15,0], "timeEnd": [2018,14,6,16,0], "event": "BIDS"},
+                              {"timeStart": [2018,14,6,16,0], "timeEnd": [2018,14,6,17,0], "event": "Nipype"},
+                              {"timeStart": [2018,14,6,17,0], "timeEnd": [2018,14,6,18,30], "event": "Dinner + Unconference"}
                               ]
                             }
                   },
                   {"date": "Friday, June 15",
-                                "times": {"HackTrack": [
-                                            {"timeStart": [2018,14,6,9,0], "timeEnd": [2018,14,6,11,0], "event": "Welcome + Intro to Brainhack "}
-                                            ],
-                                          "LearnTrack": [
-                                            {"timeStart": [2018,14,6,9,0], "timeEnd": [2018,14,6,11,0], "event": "Welcome + Intro to Brainhack "}
-                                            ]
-                                          }
+                   "times": {"HackTrack": [
+                              {"timeStart": [2018,15,6,9,0], "timeEnd": [2018,15,6,12,0], "event": "Hacking"},
+                              {"timeStart": [2018,15,6,12,0], "timeEnd": [2018,15,6,13,30], "event": "Lunch + Unconference"},
+                              {"timeStart": [2018,15,6,13,30], "timeEnd": [2018,15,6,19,0], "event": "Hacking"},
+                              {"timeStart": [2018,15,6,19,0], "timeEnd": [2018,15,6,22,30], "event": "Social"}
+                              ],
+                             "TrainTrack": [
+                              {"timeStart": [2018,15,6,9,0], "timeEnd": [2018,15,6,10,0], "event": "CPAC"},
+                              {"timeStart": [2018,15,6,10,0], "timeEnd": [2018,15,6,11,0], "event": "Dipy"},
+                              {"timeStart": [2018,15,6,11,0], "timeEnd": [2018,15,6,12,0], "event": "MVPA"},
+                              {"timeStart": [2018,15,6,12,0], "timeEnd": [2018,15,6,13,30], "event": "Lunch + Unconference"},
+                              {"timeStart": [2018,15,6,13,30], "timeEnd": [2018,15,6,15,30], "event": "Repronim: Data Processing"},
+                              {"timeStart": [2018,15,6,15,30], "timeEnd": [2018,15,6,19,0], "event": "Unconference Tutorials"},
+                              {"timeStart": [2018,15,6,19,0], "timeEnd": [2018,15,6,22,30], "event": "Social"}
+                              ]
+                            }
                   },
                   {"date": "Saturday, June 16",
-                                "times": {"HackTrack": [
-                                            {"timeStart": [2018,14,6,9,0], "timeEnd": [2018,14,6,11,0], "event": "Welcome + Intro to Brainhack "}
-                                            ],
-                                          "LearnTrack": [
-                                            {"timeStart": [2018,14,6,9,0], "timeEnd": [2018,14,6,11,0], "event": "Welcome + Intro to Brainhack "}
-                                            ]
-                                          }
+                   "times": {"HackTrack": [
+                              {"timeStart": [2018,16,6,9,0], "timeEnd": [2018,16,6,12,0], "event": "Hacking"},
+                              {"timeStart": [2018,16,6,12,0], "timeEnd": [2018,16,6,13,30], "event": "Lunch + Unconference"},
+                              {"timeStart": [2018,16,6,13,30], "timeEnd": [2018,16,6,15,0], "event": "Hacking"},
+                              {"timeStart": [2018,16,6,15,0], "timeEnd": [2018,16,6,17,0], "event": "Project Presentations + Wrap-up"}
+                              ],
+                             "TrainTrack": [
+                              {"timeStart": [2018,16,6,9,0], "timeEnd": [2018,16,6,11,0], "event": "Repronim: Statistics + FAIR Data"},
+                              {"timeStart": [2018,16,6,11,0], "timeEnd": [2018,16,6,12,0], "event": "Nilearn"},
+                              {"timeStart": [2018,16,6,12,0], "timeEnd": [2018,16,6,13,30], "event": "Lunch + Unconference"},
+                              {"timeStart": [2018,16,6,15,0], "timeEnd": [2018,16,6,17,0], "event": "Project Presentations + Wrap-up"}
+                              ]
+                            }
                   }
                   ],
     "location_logo": "http://nus.edu.sg/images/resources/nus-og-logo.jpg",
