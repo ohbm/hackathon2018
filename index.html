@@ -150,7 +150,10 @@
           <div class="row text-left">
             <div class="col-12">
 					<h4>Dates: {{info.dates}}</h4> <br/>
-					<h4>Costs: {{info.details.costs}}</h4> <br/> <p>{{ info.details.cost_breakdown}}</p>
+					<h4>Costs: {{info.details.costs}}</h4> <br/>
+            <p v-html="info.details.cost_breakdown"></p>
+            <h5> Travel Awards </h5>
+            <p v-html="info.details.travel_awards"></p>
 					<h4>Location: <a href="#map"> {{info.location}}</a></h4> <br/>
 						</div>
 					</div>
