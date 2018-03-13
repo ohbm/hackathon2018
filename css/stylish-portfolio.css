@@ -413,9 +413,33 @@ a:focus, a:hover {
     border-top-width: thin;
 }
 
-/* Extra small devices (portrait phones, less than 576px)*/
+.timeBlock {
+  background-color: #e74030d9;
+  margin: 5px;
+  padding: 10px;
+  display: block;
+  border-style: solid;
+  border-radius: 20px;
+  border-color: #e74030d9;
+  word-break:break-word;
+  font-size: 0.9em;
+}
+
+.dark {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.HackTrack .timeBlock {
+  background-color: #007bffe0;
+  border-color: #007bffe0;
+}
+
+.TrainTrack {
+
+}
+/* Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
   .scheduleCal{
     max-width: 75vw;
   }
-}
+}*/

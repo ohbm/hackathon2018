@@ -21,7 +21,7 @@
     <!-- <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> -->
    <link href='https://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css'>
    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
-   <link href='https://cdn.rawgit.com/Grible/timetable.js/master/dist/styles/timetablejs.css' rel='stylesheet' type='text/css'>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -164,7 +164,7 @@
     <aside class="workspace" id="schedule" :style="{ backgroundImage: 'url(' + info.schedule_background_img + ')' }">
       <div class="container">
   			<div class="row text-center top30">
-  				<div class="col-12">
+  				<div class="col-12 dark pt-2 pb-2 pl-2 pr-">
   				    <h1>Schedule</h1>
   			    </div>
   			</div>
@@ -198,9 +198,22 @@
 
   		    </div>
         <div class="row top30 col-12" v-else>
-          <div class="scheduleCal container" v-for="(event, index) in info.schedule">
-            <h3>{{event.date}}</h3>
-            <timetable :id="'day'+index" :data="event"><timetable>
+          <div class="scheduleCal col-lg-4" v-for="(event, index) in info.schedule">
+            <h3 class="dark pt-2 pb-2 pl-2 pr-2 text-center">{{event.date}}</h3>
+            <div class="row">
+              <div class="col-6" v-for="(value, key) in event.times" :class="key">
+                <h5 class="text-center dark pt-2 pb-2 pl-2 pr-2">{{key}}</h5>
+                <div class="row timeBlock" v-for="val in value" :style="{height: (new Date(...val.timeEnd) - new Date(...val.timeStart))/3600000 * 100 +'px'}">
+                  <h6>{{moment(new Date(...val.timeStart)).format('h:mm a')}}</h6>
+
+                  {{val.event}}
+                </div>
+              </div>
+            </div>
+            <!--<div class="">
+
+              <timetable :id="'day'+index" :data="event"><timetable>
+            </div>-->
           </div>
         </div>
 
@@ -305,8 +318,7 @@
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
-    <script src="https://cdn.rawgit.com/Grible/timetable.js/master/dist/scripts/timetable.min.js"></script>
-
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js"></script>
     <script>
@@ -361,18 +373,6 @@
         watch: {
         },
         computed: {
-          renderTimetables: function() {
-            for (i=0; i< this.timetables.length; i+=1){
-              try {
-                console.log('rendring ttables')
-                this.timetables[i].draw('#day'+i); // any css selector
-              } catch (e) {
-
-              } finally {
-
-              }
-            };
-          },
         },
       })
 
