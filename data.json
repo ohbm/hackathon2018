@@ -11,7 +11,7 @@
   "slack_link":"https://brainhack-slack-invite.herokuapp.com/",
   "project_submit_link":"https://github.com/ohbm/hackathon2018/wiki/Projects",
   "title_photo_link":"https://raw.githubusercontent.com/gkiar/brain-art/master/vascular_brain/figs/brightly_robust_wallpaper.png",
-  "title_photo_author": "Greg Kiar",
+  "title_photo_author": "Greg Kiar and Aman Badhwar",
   "services":[{
     "name": "Share",
     "desc": "Show your research to other neuroimaging researchers.",
