@@ -64,10 +64,11 @@
                              "TrainTrack": [
                               {"timeStart": [2018,15,6,9,0], "timeEnd": [2018,15,6,10,0], "event": "CPAC"},
                               {"timeStart": [2018,15,6,10,0], "timeEnd": [2018,15,6,11,0], "event": "Dipy"},
-                              {"timeStart": [2018,15,6,11,0], "timeEnd": [2018,15,6,12,0], "event": "MVPA"},
+                              {"timeStart": [2018,15,6,11,0], "timeEnd": [2018,15,6,12,0], "event": "Git/Github"},
                               {"timeStart": [2018,15,6,12,0], "timeEnd": [2018,15,6,13,30], "event": "Lunch + Unconference"},
                               {"timeStart": [2018,15,6,13,30], "timeEnd": [2018,15,6,15,30], "event": "Repronim: Data Processing"},
-                              {"timeStart": [2018,15,6,15,30], "timeEnd": [2018,15,6,19,0], "event": "Unconference Tutorials"},
+                              {"timeStart": [2018,15,6,15,30], "timeEnd": [2018,15,6,16,30], "event": "Building Open Communities"},
+                              {"timeStart": [2018,15,6,16,30], "timeEnd": [2018,15,6,19,0], "event": "Unconference Tutorials"},
                               {"timeStart": [2018,15,6,19,0], "timeEnd": [2018,15,6,22,30], "event": "Social"}
                               ]
                             }
