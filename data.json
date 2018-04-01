@@ -95,6 +95,7 @@
     "sponsors": [{"name": "INCF", "url": "https://www.incf.org/", "logo":"http://nprc.incf.org/wp-content/uploads/2016/10/INCF-short-logo-pantone-1.png"},
                  {"name": "Ludmer Centre", "url": "http://ludmercentre.ca/", "logo":"http://www.brainhack.org/OHBM2016/img/ludmer-center.png"},
                  {"name": "McGill Centre for Integrative Neuroscience", "url":"https://mcin-cnim.ca/", "logo":"https://mcin-cnim.ca/wp-content/themes/mcin_2016/images/MCIN-logo-V01.png"},
+                 {"name": "Mozilla Foundation", "url":"https://www.mozilla.org/en-US/foundation/", "logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Mozilla_logo.svg/512px-Mozilla_logo.svg.png"},
                  {"name": "Organization for Human Brain Mapping", "url": "https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageID=3267&activateFull=false", "logo":"https://www.humanbrainmapping.org/templates/1002/images/hbm_logo.png"}],
     "organizers": ["Anisha Keshavan*", "Gregory Kiar*", "Valeria Kebets", "Csaba Orban", "Anqi Qiu", "Thomas Yeo", "Chris Gorgolewski", "JB Poline"]
 }
