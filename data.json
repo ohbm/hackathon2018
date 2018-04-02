@@ -49,7 +49,7 @@
                               {"timeStart": [2018,14,6,12,0], "timeEnd": [2018,14,6,13,0], "event": "Lunch"},
                               {"timeStart": [2018,14,6,13,0], "timeEnd": [2018,14,6,15,0], "event": "Repronim: Reproducibility Basics"},
                               {"timeStart": [2018,14,6,15,0], "timeEnd": [2018,14,6,16,0], "event": "BIDS"},
-                              {"timeStart": [2018,14,6,16,0], "timeEnd": [2018,14,6,17,0], "event": "Nipype"},
+                              {"timeStart": [2018,14,6,16,0], "timeEnd": [2018,14,6,17,0], "event": "Git/Github"},
                               {"timeStart": [2018,14,6,17,0], "timeEnd": [2018,14,6,18,30], "event": "Dinner + Unconference"}
                               ]
                             }
@@ -62,9 +62,9 @@
                               {"timeStart": [2018,15,6,19,0], "timeEnd": [2018,15,6,22,30], "event": "Social"}
                               ],
                              "TrainTrack": [
-                              {"timeStart": [2018,15,6,9,0], "timeEnd": [2018,15,6,10,0], "event": "CPAC"},
+                              {"timeStart": [2018,15,6,9,0], "timeEnd": [2018,15,6,10,0], "event": "Nipype"},
                               {"timeStart": [2018,15,6,10,0], "timeEnd": [2018,15,6,11,0], "event": "Dipy"},
-                              {"timeStart": [2018,15,6,11,0], "timeEnd": [2018,15,6,12,0], "event": "Git/Github"},
+                              {"timeStart": [2018,15,6,11,0], "timeEnd": [2018,15,6,12,0], "event": "CPAC"},
                               {"timeStart": [2018,15,6,12,0], "timeEnd": [2018,15,6,13,30], "event": "Lunch + Unconference"},
                               {"timeStart": [2018,15,6,13,30], "timeEnd": [2018,15,6,15,30], "event": "Repronim: Data Processing"},
                               {"timeStart": [2018,15,6,15,30], "timeEnd": [2018,15,6,16,30], "event": "Building Open Communities"},
