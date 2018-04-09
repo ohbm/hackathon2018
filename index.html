@@ -399,7 +399,10 @@
       })
 
       $.getJSON("./participants.json", function(data){
-        app.participants = _.sortBy(data.participants, function(v){ return v.split(" ")[1]})
+        app.participants = _.sortBy(data.participants, function(v){
+          var names = v.split(" ");
+          return names[names.length-1]
+        })
       })
 
     </script>
