@@ -330,6 +330,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
     <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/js/bootstrap.js"></script>
     <script>
@@ -398,7 +399,7 @@
       })
 
       $.getJSON("./participants.json", function(data){
-        app.participants = data.participants
+        app.participants = _.sortBy(data.participants, function(v){ return v.split(" ")[1]})
       })
 
     </script>
