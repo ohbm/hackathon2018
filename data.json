@@ -49,7 +49,7 @@
                               {"timeStart": [2018,14,6,12,0], "timeEnd": [2018,14,6,13,0], "event": "Lunch"},
                               {"timeStart": [2018,14,6,13,0], "timeEnd": [2018,14,6,15,0], "event": "Repronim: Reproducibility Basics"},
                               {"timeStart": [2018,14,6,15,0], "timeEnd": [2018,14,6,16,0], "event": "BIDS"},
-                              {"timeStart": [2018,14,6,16,0], "timeEnd": [2018,14,6,17,0], "event": "Nipype"},
+                              {"timeStart": [2018,14,6,16,0], "timeEnd": [2018,14,6,17,0], "event": "Git/Github"},
                               {"timeStart": [2018,14,6,17,0], "timeEnd": [2018,14,6,18,30], "event": "Dinner + Unconference"}
                               ]
                             }
@@ -62,12 +62,13 @@
                               {"timeStart": [2018,15,6,19,0], "timeEnd": [2018,15,6,22,30], "event": "Social"}
                               ],
                              "TrainTrack": [
-                              {"timeStart": [2018,15,6,9,0], "timeEnd": [2018,15,6,10,0], "event": "CPAC"},
+                              {"timeStart": [2018,15,6,9,0], "timeEnd": [2018,15,6,10,0], "event": "Nipype"},
                               {"timeStart": [2018,15,6,10,0], "timeEnd": [2018,15,6,11,0], "event": "Dipy"},
-                              {"timeStart": [2018,15,6,11,0], "timeEnd": [2018,15,6,12,0], "event": "MVPA"},
+                              {"timeStart": [2018,15,6,11,0], "timeEnd": [2018,15,6,12,0], "event": "CPAC"},
                               {"timeStart": [2018,15,6,12,0], "timeEnd": [2018,15,6,13,30], "event": "Lunch + Unconference"},
                               {"timeStart": [2018,15,6,13,30], "timeEnd": [2018,15,6,15,30], "event": "Repronim: Data Processing"},
-                              {"timeStart": [2018,15,6,15,30], "timeEnd": [2018,15,6,19,0], "event": "Unconference Tutorials"},
+                              {"timeStart": [2018,15,6,15,30], "timeEnd": [2018,15,6,16,30], "event": "Building Open Communities"},
+                              {"timeStart": [2018,15,6,16,30], "timeEnd": [2018,15,6,19,0], "event": "Unconference Tutorials"},
                               {"timeStart": [2018,15,6,19,0], "timeEnd": [2018,15,6,22,30], "event": "Social"}
                               ]
                             }
@@ -95,6 +96,7 @@
     "sponsors": [{"name": "INCF", "url": "https://www.incf.org/", "logo":"http://nprc.incf.org/wp-content/uploads/2016/10/INCF-short-logo-pantone-1.png"},
                  {"name": "Ludmer Centre", "url": "http://ludmercentre.ca/", "logo":"http://www.brainhack.org/OHBM2016/img/ludmer-center.png"},
                  {"name": "McGill Centre for Integrative Neuroscience", "url":"https://mcin-cnim.ca/", "logo":"https://mcin-cnim.ca/wp-content/themes/mcin_2016/images/MCIN-logo-V01.png"},
+                 {"name": "Mozilla Foundation", "url":"https://www.mozilla.org/en-US/foundation/", "logo":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Mozilla_logo.svg/512px-Mozilla_logo.svg.png"},
                  {"name": "Organization for Human Brain Mapping", "url": "https://www.humanbrainmapping.org/i4a/pages/index.cfm?pageID=3267&activateFull=false", "logo":"https://www.humanbrainmapping.org/templates/1002/images/hbm_logo.png"}],
     "organizers": ["Anisha Keshavan*", "Gregory Kiar*", "Valeria Kebets", "Csaba Orban", "Anqi Qiu", "Thomas Yeo", "Chris Gorgolewski", "JB Poline"]
 }
