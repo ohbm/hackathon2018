@@ -13,7 +13,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="ohbm_brainhack_2018_badge_front_template.svg">
+   sodipodi:docname="ohbm_brainhack_2018_badge_front_blank.svg">
   <metadata
      id="metadata345">
     <rdf:RDF>
@@ -22,6 +22,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -762,9 +763,9 @@
      id="namedview341"
      showgrid="false"
      showguides="false"
-     inkscape:zoom="1.6152249"
-     inkscape:cx="175.20978"
-     inkscape:cy="302.73458"
+     inkscape:zoom="1.246981"
+     inkscape:cx="190.45623"
+     inkscape:cy="238.57964"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -910,45 +911,4 @@
        transform="translate(283.96763,417.44444)"
        xlink:href="#k" />
   </g>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-weight:normal;font-size:13.43007374px;line-height:125%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#1f4a67;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="319.41226"
-     y="206.06461"
-     id="text4682"
-     sodipodi:linespacing="125%"><tspan
-       sodipodi:role="line"
-       id="tspan4684"
-       x="319.41226"
-       y="206.06461"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:47.5px;font-family:Colaborate-Medium;-inkscape-font-specification:Colaborate-Medium;fill:#1f4a67;fill-opacity:1">{First}</tspan><tspan
-       sodipodi:role="line"
-       x="319.41226"
-       y="246.68961"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;font-family:Colaborate-Medium;-inkscape-font-specification:Colaborate-Medium;fill:#1f4a67;fill-opacity:1"
-       id="tspan4340">{Last}</tspan></text>
-  <text
-     sodipodi:linespacing="125%"
-     id="text4686"
-     y="277.93417"
-     x="318.79431"
-     style="font-style:normal;font-weight:normal;font-size:13.43007374px;line-height:125%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#1f4a67;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     xml:space="preserve"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;font-family:Colaborate-Medium;-inkscape-font-specification:Colaborate-Medium;fill:#1f4a67;fill-opacity:1"
-       y="277.93417"
-       x="318.79431"
-       id="tspan4688"
-       sodipodi:role="line">{Location}</tspan></text>
-  <text
-     sodipodi:linespacing="125%"
-     id="text4692"
-     y="529.62622"
-     x="169.85727"
-     style="font-style:normal;font-weight:normal;font-size:13.43007374px;line-height:125%;font-family:sans-serif;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     xml:space="preserve"><tspan
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25px;font-family:Colaborate-Medium;-inkscape-font-specification:Colaborate-Medium;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1"
-       y="529.62622"
-       x="169.85727"
-       id="tspan4694"
-       sodipodi:role="line">{PositionAtEvent}</tspan></text>
 </svg>
