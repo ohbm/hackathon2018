@@ -25,10 +25,10 @@ body:
       value: |
         ## Project info
         
-  - type: markdown
+  - type: textarea
+    label: Project leader
     attributes:
       value: |
-        ## Project leader
         Name: 
         Github username:
 
