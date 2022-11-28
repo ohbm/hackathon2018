@@ -26,8 +26,8 @@ body:
         ## Project info
         
   - type: textarea
-    label: Project leader
     attributes:
+      label: Project leader
       value: |
         Name: 
         Github username:
